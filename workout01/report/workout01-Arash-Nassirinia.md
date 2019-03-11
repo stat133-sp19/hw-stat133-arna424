@@ -84,38 +84,16 @@ all_sum
     ## 4 Stephen Curry   1250   584     0.467
     ## 5 Draymond Green   578   245     0.424
 
-``` r
-#Report
+Report
+======
 
-"
-Introduction: 
-Have you ever seen Steph Curry's shots mapped out on a basketball court? No? Well in this project, you finally can! The purpose of this report is to explain how I came up with the shot charts and data about Andre Iguodala,
-Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry.
+" Introduction: Have you ever seen Steph Curry's shots mapped out on a basketball court? No? Well in this project, you finally can! The purpose of this report is to explain how I came up with the shot charts and data about Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry.
 
-Motivation:
-The motivation behind this workout project is to use the data analysis skills we have been developing in stat 133 on a much more massive scale. We have the opportunity to work with a much more complex file structure and upload files to GitHub. 
+Motivation: The motivation behind this workout project is to use the data analysis skills we have been developing in stat 133 on a much more massive scale. We have the opportunity to work with a much more complex file structure and upload files to GitHub.
 
-Background:
-We will be looking at 5 basketball players in the NBA:
-- Andre Iguodala
-- Graymond Green
-- Kevin Durant
-- Klay Thompson
-- Stephen Curry
-All 5 of these play for the Golden State warriors but some have different positions. To clarify different posiitons and different terms used throughout the workout project, I made a Data Dictionary in the data folder. Although many are self descriptive, some are not, so this dictionary is a very useful guide if one is not familiar with the column headers found in the .csv files for the data.
+Background: We will be looking at 5 basketball players in the NBA: - Andre Iguodala - Graymond Green - Kevin Durant - Klay Thompson - Stephen Curry All 5 of these play for the Golden State warriors but some have different positions. To clarify different posiitons and different terms used throughout the workout project, I made a Data Dictionary in the data folder. Although many are self descriptive, some are not, so this dictionary is a very useful guide if one is not familiar with the column headers found in the .csv files for the data.
 
-Data:
-I used the curl function within terminal to download the shot data for the five players. Again, there a data dictionary that clarifies the column names. A few examples are:
-1. x and y refer to the court coordinates (measured in inches) where a shot occurred.
-2. team_name refers to the name of the NBA team.
-3. game_date refers to the date that the game took place.
-4. season is the NBA season during which the game took place.
-5. Opponent is the team that they are playing against.
-I then imported the data into the make-shots-data-script.R using the following code:
-"
-```
-
-    ## [1] "\nIntroduction: \nHave you ever seen Steph Curry's shots mapped out on a basketball court? No? Well in this project, you finally can! The purpose of this report is to explain how I came up with the shot charts and data about Andre Iguodala,\nDraymond Green, Kevin Durant, Klay Thompson, and Stephen Curry.\n\nMotivation:\nThe motivation behind this workout project is to use the data analysis skills we have been developing in stat 133 on a much more massive scale. We have the opportunity to work with a much more complex file structure and upload files to GitHub. \n\nBackground:\nWe will be looking at 5 basketball players in the NBA:\n- Andre Iguodala\n- Graymond Green\n- Kevin Durant\n- Klay Thompson\n- Stephen Curry\nAll 5 of these play for the Golden State warriors but some have different positions. To clarify different posiitons and different terms used throughout the workout project, I made a Data Dictionary in the data folder. Although many are self descriptive, some are not, so this dictionary is a very useful guide if one is not familiar with the column headers found in the .csv files for the data.\n\nData:\nI used the curl function within terminal to download the shot data for the five players. Again, there a data dictionary that clarifies the column names. A few examples are:\n1. x and y refer to the court coordinates (measured in inches) where a shot occurred.\n2. team_name refers to the name of the NBA team.\n3. game_date refers to the date that the game took place.\n4. season is the NBA season during which the game took place.\n5. Opponent is the team that they are playing against.\nI then imported the data into the make-shots-data-script.R using the following code:\n"
+Data: I used the curl function within terminal to download the shot data for the five players. Again, there a data dictionary that clarifies the column names. A few examples are: 1. x and y refer to the court coordinates (measured in inches) where a shot occurred. 2. team\_name refers to the name of the NBA team. 3. game\_date refers to the date that the game took place. 4. season is the NBA season during which the game took place. 5. Opponent is the team that they are playing against. I then imported the data into the make-shots-data-script.R using the following code: "
 
 ``` r
 data_types = c("team_name"="character", "game_date"="character", "season" = "integer", "period"="integer",
@@ -129,14 +107,7 @@ green <- read.csv("./data/draymond-green.csv", stringsAsFactors = FALSE, colClas
 iguodala <- read.csv("./data/andre-iguodala.csv", stringsAsFactors = FALSE, colClasses=data_types)
 ```
 
-``` r
-"
-After importing the data, I used logical subsetting to change shot_made_flag from n to shot no and from y to shot yes. Among some summaries, I then exported a new file called shots-data.csv into the data file.
-After this step was done, I then created a make-shot-charts-script.R file to create visual representations of the players' shot data. I imported the shots-data.csv file:
-"
-```
-
-    ## [1] "\nAfter importing the data, I used logical subsetting to change shot_made_flag from n to shot no and from y to shot yes. Among some summaries, I then exported a new file called shots-data.csv into the data file.\nAfter this step was done, I then created a make-shot-charts-script.R file to create visual representations of the players' shot data. I imported the shots-data.csv file:\n"
+" After importing the data, I used logical subsetting to change shot\_made\_flag from n to shot no and from y to shot yes. Among some summaries, I then exported a new file called shots-data.csv into the data file. After this step was done, I then created a make-shot-charts-script.R file to create visual representations of the players' shot data. I imported the shots-data.csv file: "
 
 ``` r
 data_types = c("team_name"="character", "game_date"="character", "season" = "integer", "period"="integer",
@@ -146,12 +117,7 @@ data_types = c("team_name"="character", "game_date"="character", "season" = "int
 players <- read.csv('./data/shots-data.csv', stringsAsFactors = FALSE, colClasses=data_types)
 ```
 
-``` r
-"
-After getting this data, I used the ggplot2 library to create visual representation of the courts and players' shot data. The code follows the same type of logic for each player. This was used to general Steph Curry's data:"
-```
-
-    ## [1] "\nAfter getting this data, I used the ggplot2 library to create visual representation of the courts and players' shot data. The code follows the same type of logic for each player. This was used to general Steph Curry's data:"
+" After getting this data, I used the ggplot2 library to create visual representation of the courts and players' shot data. The code follows the same type of logic for each player. This was used to general Steph Curry's data: "
 
 ``` r
 stephen <-players[players$name=="Stephen Curry",]
@@ -163,11 +129,7 @@ stephen_shot_chart <- ggplot(data = stephen) +
   theme_minimal()
 ```
 
-``` r
 "After getting the plots for each player, I exported the graphs (mostly) as PDF's. This is how it was done for Steph Curry. Again, the code for other players follows the same logic:"
-```
-
-    ## [1] "After getting the plots for each player, I exported the graphs (mostly) as PDF's. This is how it was done for Steph Curry. Again, the code for other players follows the same logic:"
 
 ``` r
 pdf('./images/stephen-curry-shot-chart.pdf', width=6.5,height=5)
@@ -177,23 +139,12 @@ dev.off()
 
 <img src="../images/gsw-shot-charts.png" width="80%" style="display: block; margin: auto;" />
 
-``` r
-"
-Analysis:
-Finally, we created a table that how many shots each player, shot, made, and the percentage that they made (perc_made) above. This shows us that in terms of two-pointers, Andre Iguodala had the highest perentage made (63.80952%), although Kevin Durant had the most made in total. For three pointers, Klay Thompson had the highest percentage made, and for all shots, Kevin Durant had the highest percentage made.
+" Analysis: Finally, we created a table that how many shots each player, shot, made, and the percentage that they made (perc\_made) above. First, we start with two pointers. In terms of two-pointers, Andre Iguodala had the highest percentage made (63.80952%), although Kevin Durant had the most made in total. Out of all 5 players, Kevin Durant has the most total shots (643), followed by Klay Thompson at 640. Using the same table, we see that for three pointers, Klay Thompson had the highest percentage made, while Stephen Curry has the most total three pointers made. Out of all five players, Stephen Curry has also shot the most three pointers (687). So, although Stephen Curry has made the most total three pointers out of all players, Klay Thompson has the highest percentage of shots that have actually gone in. Lastly for all shots (both two pointers and three pointers), Kevin Durant had the highest percentage made, while Stephen Curry had the highest total shots made, at 584 out of 1,250 total shots. What is really interesting here is that Kevin Durant has the highest percentage made of all shots. Generally when people think of the Golden State Warriors, they think of Stephen Curry as the star. Although this is true in terms of the number of shots that he has made, he does not have the highest percentage made out of these 5 players. He does not hold the lead in two pointers or three pointers eithers (again in terms of percentage made of the shots).
 
-Discussion:
-This table mixed with the graphs that we made using ggplot give us both visual and quantitative ways of interepreting the data. For example, the graph for Kevin Durant backs up what we found in our chart: it shows visually that most of his shots went in (because there are more green than red dots, and the green dots represent him making the shots).
+Discussion: This table mixed with the graphs that we made using ggplot give us both visual and quantitative ways of interepreting the data. For example, the graph for Kevin Durant backs up what we found in our chart: it shows visually that most of his shots went in (because there are more green than red dots, and the green dots represent him making the shots).
 
-Conclusions:
-All five of the players we looked at are tremendous, but each have a different top strength. 
+Conclusions: All five of the players we looked at are tremendous, but each have a different top strength. For one, it may be making the most total shots (Stephen Curry). For another, it may be having the highest percentage of shots made. Regardless of which strength each player has, it seems like they work well together and compliment each other's skills.
 
-References:
-The player data was found at: https://github.com/ucb-stat133/stat133-hws
+References: The player data was found at: <https://github.com/ucb-stat133/stat133-hws>.
 
-Take-home message:
-In terms of percentage made, Andre Iguodala performed the best at two pointers, Klay Thompson the best at three pointers, and Kevin Durant the best overall. This is made clear when looking at the graphs of all players shown earlier.
-"
-```
-
-    ## [1] "\nAnalysis:\nFinally, we created a table that how many shots each player, shot, made, and the percentage that they made (perc_made) above. This shows us that in terms of two-pointers, Andre Iguodala had the highest perentage made (63.80952%), although Kevin Durant had the most made in total. For three pointers, Klay Thompson had the highest percentage made, and for all shots, Kevin Durant had the highest percentage made.\n\nDiscussion:\nThis table mixed with the graphs that we made using ggplot give us both visual and quantitative ways of interepreting the data. For example, the graph for Kevin Durant backs up what we found in our chart: it shows visually that most of his shots went in (because there are more green than red dots, and the green dots represent him making the shots).\n\nConclusions:\nAll five of the players we looked at are tremendous, but each have a different top strength. \n\nReferences:\nThe player data was found at: https://github.com/ucb-stat133/stat133-hws\n\nTake-home message:\nIn terms of percentage made, Andre Iguodala performed the best at two pointers, Klay Thompson the best at three pointers, and Kevin Durant the best overall. This is made clear when looking at the graphs of all players shown earlier.\n"
+Take-home message: In terms of percentage made, Andre Iguodala performed the best at two pointers, Klay Thompson the best at three pointers, and Kevin Durant the best overall. This is made clear when looking at the graphs of all players shown earlier. When trying to look at data and analyze data, it is important to look at things both visually and quantitatively. "
