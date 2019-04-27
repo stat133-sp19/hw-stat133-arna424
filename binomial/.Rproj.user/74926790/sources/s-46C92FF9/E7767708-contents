@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+author: "Arash Nassirinia"
+date: "April 27, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(binomial)
+```
+
+```{r}
+bin_choose(n = 5, k = 2)
+bin_probability(success = 2, trials = 5, prob = 0.5)
+bin_distribution(trials = 5, prob = 0.5)
+dis1 <- bin_distribution(trials = 5, prob = 0.5)
+plot(dis1)
+bin_cumulative(trials = 5, prob = 0.5)
+dis2 <- bin_cumulative(trials = 5, prob = 0.5)
+plot(dis2)
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+bin1 <- bin_variable(trials = 10, p = 0.3)
+binsum1 <- summary(bin1)
+binsum1
+bin_mean(10, 0.3)
+bin_variance(10, 0.3)
+bin_mode(10, 0.3)
+bin_skewness(10, 0.3)
+bin_kurtosis(10, 0.3)
+```

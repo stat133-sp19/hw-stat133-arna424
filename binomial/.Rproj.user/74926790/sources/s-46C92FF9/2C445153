@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556366173125.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2C445153",
+    "lastKnownWriteTime" : 1556318261,
+    "last_content_update" : 1556318261,
+    "path" : "C:/Users/Arash N/Desktop/Berkeley/Stat 133/Assignments/workout03/binomial/R/bin_probability.R",
+    "project_path" : "R/bin_probability.R",
+    "properties" : {
+        "cursorPosition" : "7,10",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

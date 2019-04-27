@@ -1,0 +1,13 @@
+Package: binomial
+Type: Package
+Title: Binomial Functions
+Version: 0.1.0
+Author: Arash Nassirinia
+Maintainer: Arash Nassirinia <ar.na.424@berkeley.edu>
+Description: Contains binomial functions.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat

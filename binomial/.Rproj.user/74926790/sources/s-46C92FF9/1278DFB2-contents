@@ -1,0 +1,9 @@
+library(testthat)
+
+#check_prob
+
+test_that("check_prob as expected", {
+  expect_true(check_prob(.3))
+  expect_error(check_prob(800),"invalid prob value")
+  expect_error(check_prob(800))
+})

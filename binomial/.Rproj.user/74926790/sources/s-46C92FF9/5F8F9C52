@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556366851883.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2344201790",
+    "id" : "5F8F9C52",
+    "lastKnownWriteTime" : 1556367528,
+    "last_content_update" : 1556367528197,
+    "path" : "C:/Users/Arash N/Desktop/Berkeley/Stat 133/Assignments/workout03/binomial/vignettes/introduction.Rmd",
+    "project_path" : "vignettes/introduction.Rmd",
+    "properties" : {
+        "cursorPosition" : "54,3",
+        "last_setup_crc32" : "46C92FF9ac0fac9e",
+        "scrollLine" : "28",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

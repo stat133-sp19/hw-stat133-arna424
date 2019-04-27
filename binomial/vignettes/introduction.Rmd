@@ -1,0 +1,55 @@
+---
+title: "Getting Started with binomial"
+author: "Arash Nassirinia"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to cointoss}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE, message = F}
+knitr::opts_chunk$set(echo = TRUE)
+library(binomial)
+library(ggplot2)
+```
+
+##Binomial
+
+The R package binomial has functions that calculate probabilities of a Binomial random variable, and related calculations such as the probability distribution, the expected value, variance, etc.
+
+##Private Functions
+There are three functions used that return true or return an error:
+check_trials, check_prob, and check_successes
+
+these are used in the main functions. 
+
+##Main Functions 
+For example, the function bin_distribution gives us the probability distribution of success. For example, we can do:
+```{r}
+d<-bin_distribution(trials = 5, prob = 0.5)
+d
+```
+We can then plot it using the plot method:
+```{r}
+plot(d)
+```
+the function bin_cumulative does the same thing but also includes the cumulative probability (adding to one in the last row). For example:
+```{r}
+c<-bin_cumulative(trials = 5, prob = 0.5)
+plot(c)
+```
+
+We also make the function bin_variable that returns a "binvar" or binomial random variable object that is a list of the trials and probability. Calling the summary method, we are able to see even more information:
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+binsum1 <- summary(bin1)
+binsum1
+```
+
+Lastly, we have the main functions for each of the summary measures like bin_mean and bin_variance:
+```{r}
+bin_mean(10, 0.3)
+bin_variance(10, 0.3)
+```

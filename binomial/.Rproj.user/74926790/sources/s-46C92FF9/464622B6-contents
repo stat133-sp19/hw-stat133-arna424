@@ -1,0 +1,74 @@
+#' @title bin_mean
+#' @description calculates mean
+#' @param trials: number of trials
+#' @param prob: probability value
+#' @return mean using trials and probability
+bin_mean<-function(trials,prob){
+  if (check_trials(trials) & check_prob(prob)){
+    return(aux_mean(trials,prob))
+  } else if (!check_trials(trials)){
+    stop('invalid trials value')
+  } else if (!check_prob(prob)){
+    stop('invalid prob value')
+  }
+}
+
+#' @title bin_variance
+#' @description calculates variance
+#' @param success: number of trials
+#' @param trials: probability value
+#' @return variance using trials and probability
+bin_variance<-function(trials,prob){
+  if (check_trials(trials) & check_prob(prob)){
+    return(aux_variance(trials,prob))
+  } else if (!check_trials(trials)){
+    stop('invalid trials value')
+  } else if (!check_prob(prob)){
+    stop('invalid prob value')
+  }
+}
+
+#' @title bin_mode
+#' @description calculates mode
+#' @param success: number of trials
+#' @param trials: probability value
+#' @return mode using trials and probability
+bin_mode<-function(trials,prob){
+  if (check_trials(trials) & check_prob(prob)){
+    return(aux_mode(trials,prob))
+  } else if (!check_trials(trials)){
+    stop('invalid trials value')
+  } else if (!check_prob(prob)){
+    stop('invalid prob value')
+  }
+}
+
+#' @title bin_skewness
+#' @description calculates skewness
+#' @param success: number of trials
+#' @param trials: probability value
+#' @return skewness using trials and probability
+bin_skewness<-function(trials,prob){
+  if (check_trials(trials) & check_prob(prob)){
+    return(aux_skewness(trials,prob))
+  } else if (!check_trials(trials)){
+    stop('invalid trials value')
+  } else if (!check_prob(prob)){
+    stop('invalid prob value')
+  }
+}
+
+#' @title bin_kurtosis
+#' @description calculates kurtosis
+#' @param success: number of trials
+#' @param trials: probability value
+#' @return kurtosis using trials and probability
+bin_kurtosis<-function(trials,prob){
+  if (check_trials(trials) & check_prob(prob)){
+    return(aux_kurtosis(trials,prob))
+  } else if (!check_trials(trials)){
+    stop('invalid trials value')
+  } else if (!check_prob(prob)){
+    stop('invalid prob value')
+  }
+}
