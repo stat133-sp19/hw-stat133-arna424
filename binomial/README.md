@@ -1,4 +1,4 @@
-#Overview
+## Overview
 Binomial is an R package that implements functions for calculating probabilities of a Binomial random variable, and related calculations such as the probability distribution, the expected value, variance, etc.
 
 The function bin_distribution gives us the probability distribution of success and can be plotted using the plot method.
@@ -6,10 +6,10 @@ The function bin_cumulative does the same thing but also includes the cumulative
 We also make the function bin_variable that returns a "binvar" or binomial random variable object that is a list of the trials and probability. We can call the summary method to see even more information.
 Lastly, we have the main functions for each of the summary measures like bin_mean and bin_variance
 
-#Motivation
+## Motivation
 Understanding how to write a lot of these functions without using predefined R functions.
 
-#Usage
+## Usage
 ```r
 library(binomial)
 library(ggplot2)
